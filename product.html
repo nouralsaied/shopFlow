@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product — ShopFlow</title>
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+
+  <script>
+    const t = localStorage.getItem("shopflow-theme");
+    if (t) document.documentElement.dataset.theme = t;
+  </script>
+</head>
+<body>
+  <div id="app-header"></div>
+
+  <main id="main" class="container detail-page">
+    <nav class="breadcrumb" id="breadcrumb"></nav>
+    <div id="product-detail"></div>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script type="module" src="js/pages/product.js"></script>
+</body>
+</html>

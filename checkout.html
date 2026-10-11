@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout — ShopFlow</title>
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+
+  <script>
+    const t = localStorage.getItem("shopflow-theme");
+    if (t) document.documentElement.dataset.theme = t;
+  </script>
+</head>
+<body>
+  <div id="app-header"></div>
+
+  <main id="main" class="container checkout-page">
+    <div class="page-tabs">
+      <button type="button" class="page-tab active" data-view="checkout">Checkout</button>
+      <button type="button" class="page-tab" data-view="orders">My Orders</button>
+    </div>
+
+    <section id="view-checkout"></section>
+    <section id="view-orders" hidden></section>
+  </main>
+
+  <div id="app-footer"></div>
+
+  <script type="module" src="js/pages/checkout.js"></script>
+</body>
+</html>
